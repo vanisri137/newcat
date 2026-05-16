@@ -1,0 +1,6 @@
+fastapi[standard]
+sqlalchemy
+opencv-python-headless
+ultralytics
+python-multipart
+uvicorn
