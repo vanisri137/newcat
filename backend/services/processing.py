@@ -97,10 +97,6 @@ def process_video(video_id: int):
 
             frame_idx += 1
 
-        # Delete uploaded video after processing
-        if os.path.exists(video.filepath):
-            os.remove(video.filepath)
-
         video.status = "completed"
         db.commit()
 
