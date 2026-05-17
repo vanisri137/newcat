@@ -47,7 +47,7 @@ def process_video(video_id: int):
             return
 
         # Process roughly 1 frame per second
-        frame_interval = int(round(fps))
+        frame_interval = int(round(fps * 3))
 
         if frame_interval <= 0:
             frame_interval = 1
