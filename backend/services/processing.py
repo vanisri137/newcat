@@ -70,7 +70,7 @@ def process_video(video_id: int):
                     # Resize frame to reduce memory usage
                     frame = cv2.resize(frame, (640, 360))
 
-                    results = model(frame, verbose=False)
+                    results = model.predict(frame, imgsz=320, verbose=False)
 
                     # COCO class 15 = cat
                     for r in results:
