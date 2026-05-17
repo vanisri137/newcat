@@ -2,10 +2,6 @@
 
 AI-powered video analysis platform that detects cats in uploaded videos using YOLOv8 and displays timestamped detections in a modern dashboard.
 
-## Live Demo
-Frontend: https://catvisiondashboard.vercel.app  
-Backend API: https://newcat-9aso.onrender.com
-
 ## Tech Stack
 
 ### Frontend
