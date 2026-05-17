@@ -39,13 +39,14 @@ SQLite Database
 ## Local Setup
 
 ### Backend
+
 ```bash
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
+```
+### Features
 
-
-## Features
 - **Video Upload**: Validates max length (60s) and max size (50MB).
 - **Background Processing**: Video processing runs asynchronously via FastAPI `BackgroundTasks`.
 - **YOLOv8 Inference**: Detects cats using a lightweight, highly efficient model.
