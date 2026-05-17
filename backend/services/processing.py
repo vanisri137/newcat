@@ -68,7 +68,7 @@ def process_video(video_id: int):
 
                 if model:
                     # Resize frame to reduce memory usage
-                    frame = cv2.resize(frame, (640, 360))
+                    frame = cv2.resize(frame, (320, 240))
 
                     results = model.predict(frame, imgsz=320, verbose=False)
 
