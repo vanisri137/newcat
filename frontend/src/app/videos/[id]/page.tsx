@@ -88,24 +88,24 @@ export default function VideoAnalysis() {
                 <span className="font-semibold text-purple-900">Total Frames with Cats</span>
                 <span className="text-3xl font-black text-purple-700">{catsDetected.length}</span>
               </div>
-              <div className="grid grid-cols-3 gap-3 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6"></div>
   <div className="bg-blue-50 p-4 rounded-xl border">
     <p className="text-xs text-slate-500">Duration</p>
-    <p className="text-lg font-bold">
+    <p className="text-2xl font-black text-slate-900">
       {video.duration?.toFixed(1)}s
     </p>
   </div>
 
   <div className="bg-green-50 p-4 rounded-xl border">
     <p className="text-xs text-slate-500">Detections</p>
-    <p className="text-lg font-bold">
+    <p className="text-2xl font-black text-slate-900">
       {catsDetected.length}
     </p>
   </div>
 
   <div className="bg-purple-50 p-4 rounded-xl border">
     <p className="text-xs text-slate-500">Avg Confidence</p>
-    <p className="text-lg font-bold">
+    <p className="text-2xl font-black text-slate-900">
       {catsDetected.length > 0
         ? (
             catsDetected.reduce(
