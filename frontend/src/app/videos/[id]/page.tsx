@@ -88,6 +88,36 @@ export default function VideoAnalysis() {
                 <span className="font-semibold text-purple-900">Total Frames with Cats</span>
                 <span className="text-3xl font-black text-purple-700">{catsDetected.length}</span>
               </div>
+              <div className="grid grid-cols-3 gap-3 mb-6">
+  <div className="bg-blue-50 p-4 rounded-xl border">
+    <p className="text-xs text-slate-500">Duration</p>
+    <p className="text-lg font-bold">
+      {video.duration?.toFixed(1)}s
+    </p>
+  </div>
+
+  <div className="bg-green-50 p-4 rounded-xl border">
+    <p className="text-xs text-slate-500">Detections</p>
+    <p className="text-lg font-bold">
+      {catsDetected.length}
+    </p>
+  </div>
+
+  <div className="bg-purple-50 p-4 rounded-xl border">
+    <p className="text-xs text-slate-500">Avg Confidence</p>
+    <p className="text-lg font-bold">
+      {catsDetected.length > 0
+        ? (
+            catsDetected.reduce(
+              (sum, p) => sum + (p.confidence || 0),
+              0
+            ) / catsDetected.length * 100
+          ).toFixed(0)
+        : 0}
+      %
+    </p>
+  </div>
+</div>
               <div className="space-y-3 max-h-80 overflow-y-auto pr-2 custom-scrollbar">
                 {catsDetected.length === 0 ? (
                   <p className="text-slate-500 text-center py-8 font-medium">No cats detected in this video.</p>
