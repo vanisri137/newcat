@@ -93,7 +93,7 @@ export default function Dashboard() {
   </div>
 
 </div>
-        <section className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 hover:shadow-xl transition-all"></section>
+        <section className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 hover:shadow-xl transition-all">
           <VideoUpload />
         </section>
 
@@ -105,7 +105,7 @@ export default function Dashboard() {
             ) : (
                 videos.map(video => (
                   <Link href={`/videos/${video.id}`} key={video.id}>
-                    <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col md:flex-row md:items-center md:justify-between gap-4 hover:shadow-md hover:border-blue-100 transition-all cursor-pointer group"></div>
+                    <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col md:flex-row md:items-center md:justify-between gap-4 hover:shadow-md hover:border-blue-100 transition-all cursor-pointer group">
                       <div className="flex items-center space-x-5">
                         <div className="p-3 bg-blue-50 text-blue-600 rounded-xl group-hover:scale-110 transition-transform">
                           <PlayCircle className="w-6 h-6" />
