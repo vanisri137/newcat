@@ -41,7 +41,7 @@ export default function Dashboard() {
 
   return (
     
-    <main className="min-h-screen bg-slate-50 px-4 py-6 md:p-8 font-sans">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 px-4 py-6 md:p-8 font-sans">
       <div className="max-w-6xl mx-auto space-y-8"> 
   <header className="text-center mb-10 border-b border-slate-200 pb-8">
 
