@@ -62,32 +62,32 @@ export default function Dashboard() {
 
   <div className="bg-white p-5 rounded-2xl shadow-sm border">
     <div className="text-2xl mb-2">⚡</div>
-    <h3 className="font-semibold">Fast Analysis</h3>
-    <p className="text-sm text-slate-500">
+    <h3 className="font-bold text-slate-900 text-lg">Fast Analysis</h3>
+    <p className="text-sm text-slate-700 mt-2">
       Background processing using FastAPI.
     </p>
   </div>
 
   <div className="bg-white p-5 rounded-2xl shadow-sm border">
     <div className="text-2xl mb-2">🐱</div>
-    <h3 className="font-semibold">YOLOv8 Detection</h3>
-    <p className="text-sm text-slate-500">
+    <h3 className="font-bold text-slate-900 text-lg">YOLOv8 Detection</h3>
+    <p className="text-sm text-slate-700 mt-2">
       AI-powered cat recognition.
     </p>
   </div>
 
   <div className="bg-white p-5 rounded-2xl shadow-sm border">
     <div className="text-2xl mb-2">⏱️</div>
-    <h3 className="font-semibold">Timestamps</h3>
-    <p className="text-sm text-slate-500">
+    <h3 className="font-bold text-slate-900 text-lg">Timestamps</h3>
+    <p className="text-sm text-slate-700 mt-2">
       Exact moments when cats appear.
     </p>
   </div>
 
   <div className="bg-white p-5 rounded-2xl shadow-sm border">
     <div className="text-2xl mb-2">☁️</div>
-    <h3 className="font-semibold">Cloud Hosted</h3>
-    <p className="text-sm text-slate-500">
+    <h3 className="font-bold text-slate-900 text-lg">Cloud Hosted</h3>
+    <p className="text-sm text-slate-700 mt-2">
       Vercel + Hugging Face deployment.
     </p>
   </div>
