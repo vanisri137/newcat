@@ -88,7 +88,7 @@ export default function VideoAnalysis() {
                 <span className="font-semibold text-purple-900">Total Frames with Cats</span>
                 <span className="text-3xl font-black text-purple-700">{catsDetected.length}</span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6"></div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
   <div className="bg-blue-50 p-4 rounded-xl border">
     <p className="text-xs text-slate-500">Duration</p>
     <p className="text-2xl font-black text-slate-900">
