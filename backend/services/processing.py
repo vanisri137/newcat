@@ -47,7 +47,7 @@ def process_video(video_id: int):
             return
 
         # Process roughly 1 frame per second
-        frame_interval = int(round(fps * 3))
+        frame_interval = int(round(fps))
 
         if frame_interval <= 0:
             frame_interval = 1
@@ -68,9 +68,9 @@ def process_video(video_id: int):
 
                 if model:
                     # Resize frame to reduce memory usage
-                    frame = cv2.resize(frame, (320, 240))
-
-                    results = model.predict(frame, imgsz=320, verbose=False)
+                    frame = cv2.resize(frame, (640, 480))
+                    print(f"Processing timestamp: {timestamp:.2f}s")
+                    results = model.predict(frame, imgsz=640, verbose=False)
 
                     # COCO class 15 = cat
                     for r in results:
@@ -79,8 +79,9 @@ def process_video(video_id: int):
                         for box in boxes:
                             cls_id = int(box.cls[0])
                             conf = float(box.conf[0])
+                            print(f"Detected: {model.names[cls_id]} conf={conf:.2f}")
 
-                            if cls_id == 15 and conf > 0.4:
+                            if cls_id == 15 and conf > 0.25:
                                 cat_present = True
 
                                 if conf > max_conf:

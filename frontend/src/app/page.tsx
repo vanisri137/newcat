@@ -40,16 +40,60 @@ export default function Dashboard() {
   }
 
   return (
-    <main className="min-h-screen bg-slate-50 p-8 font-sans">
-      <div className="max-w-4xl mx-auto space-y-8">
-        <header className="flex justify-between items-center mb-10 border-b border-slate-200 pb-6">
-          <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight flex items-center gap-3">
-            <PlayCircle className="text-blue-600 w-8 h-8" /> 
-            CatVision AI Dashboard
-          </h1>
-        </header>
+    
+    <main className="min-h-screen bg-slate-50 px-4 py-6 md:p-8 font-sans">
+      <div className="max-w-6xl mx-auto space-y-8"> 
+  <header className="text-center mb-10 border-b border-slate-200 pb-8">
 
-        <section className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+  <div className="flex justify-center mb-4">
+    <PlayCircle className="text-blue-600 w-12 h-12" />
+  </div>
+
+  <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900">
+    CatVision AI
+  </h1>
+
+  <p className="mt-4 text-slate-600 text-lg max-w-2xl mx-auto">
+    Detect cats in videos using YOLOv8 and receive timestamped AI-powered analysis with confidence scores.
+  </p>
+
+</header>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+  <div className="bg-white p-5 rounded-2xl shadow-sm border">
+    <div className="text-2xl mb-2">⚡</div>
+    <h3 className="font-semibold">Fast Analysis</h3>
+    <p className="text-sm text-slate-500">
+      Background processing using FastAPI.
+    </p>
+  </div>
+
+  <div className="bg-white p-5 rounded-2xl shadow-sm border">
+    <div className="text-2xl mb-2">🐱</div>
+    <h3 className="font-semibold">YOLOv8 Detection</h3>
+    <p className="text-sm text-slate-500">
+      AI-powered cat recognition.
+    </p>
+  </div>
+
+  <div className="bg-white p-5 rounded-2xl shadow-sm border">
+    <div className="text-2xl mb-2">⏱️</div>
+    <h3 className="font-semibold">Timestamps</h3>
+    <p className="text-sm text-slate-500">
+      Exact moments when cats appear.
+    </p>
+  </div>
+
+  <div className="bg-white p-5 rounded-2xl shadow-sm border">
+    <div className="text-2xl mb-2">☁️</div>
+    <h3 className="font-semibold">Cloud Hosted</h3>
+    <p className="text-sm text-slate-500">
+      Vercel + Hugging Face deployment.
+    </p>
+  </div>
+
+</div>
+        <section className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 hover:shadow-xl transition-all"></section>
           <VideoUpload />
         </section>
 
@@ -61,13 +105,14 @@ export default function Dashboard() {
             ) : (
                 videos.map(video => (
                   <Link href={`/videos/${video.id}`} key={video.id}>
-                    <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex items-center justify-between hover:shadow-md hover:border-blue-100 transition-all cursor-pointer group">
+                    <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex flex-col md:flex-row md:items-center md:justify-between gap-4 hover:shadow-md hover:border-blue-100 transition-all cursor-pointer group"></div>
                       <div className="flex items-center space-x-5">
                         <div className="p-3 bg-blue-50 text-blue-600 rounded-xl group-hover:scale-110 transition-transform">
                           <PlayCircle className="w-6 h-6" />
                         </div>
                         <div>
-                          <p className="font-semibold text-slate-900 truncate max-w-sm">{video.filename}</p>
+                          <p className="font-semibold text-slate-900 truncate max-w-[180px] md:max-w-sm">{video.filename}</p>
+    
                           <p className="text-sm font-medium text-slate-500 capitalize flex items-center gap-2 mt-1">
                             {getStatusIcon(video.status)} 
                             <span className={video.status === 'completed' ? 'text-emerald-700' : video.status === 'failed' ? 'text-rose-700' : 'text-amber-700'}>
@@ -76,7 +121,8 @@ export default function Dashboard() {
                           </p>
                         </div>
                       </div>
-                      <div className="text-blue-600 font-semibold text-sm bg-blue-50 px-4 py-2 rounded-full group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                      <div className="text-blue-600 font-semibold text-sm bg-blue-50 px-4 py-2 rounded-full group-hover:bg-blue-600 group-hover:text-white transition-colors self-start md:self-auto">
+                      
                         View Analysis &rarr;
                       </div>
                     </div>
