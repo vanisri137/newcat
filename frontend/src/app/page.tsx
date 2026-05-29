@@ -49,13 +49,26 @@ export default function Dashboard() {
     <PlayCircle className="text-blue-600 w-12 h-12" />
   </div>
 
-  <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900">
-    CatVision AI
+  <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight">
+  CatVision <span className="text-blue-600">AI</span>
   </h1>
 
   <p className="mt-4 text-slate-600 text-lg max-w-2xl mx-auto">
-    Detect cats in videos using YOLOv8 and receive timestamped AI-powered analysis with confidence scores.
+  Upload videos, detect cats using YOLOv8, and receive
+  timestamped AI-powered analysis with confidence scores.
   </p>
+  <div className="mt-6 flex justify-center">
+  <button
+    onClick={() =>
+      document
+        .getElementById("upload-section")
+        ?.scrollIntoView({ behavior: "smooth" })
+    }
+    className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition"
+  >
+    Upload Video
+  </button>
+</div>
 
 </header>
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -93,7 +106,9 @@ export default function Dashboard() {
   </div>
 
 </div>
-        <section className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 hover:shadow-xl transition-all">
+        <section 
+         id="upload-section"
+        className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 hover:shadow-xl transition-all">
           <VideoUpload />
         </section>
 
