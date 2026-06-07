@@ -119,7 +119,7 @@ newcat/
 
 ---
 ### PROJECT DEMO
-[Watch Demo](newcat/blob/main/catvision.mp4)
+[Watch Demo](https://github.com/vanisri137/newcat/blob/main/catvision.mp4)
 
 ## ⚡ Local Setup
 
