@@ -118,6 +118,8 @@ newcat/
 ```
 
 ---
+### PROJECT DEMO
+[Watch Demo](newcat/blob/main/catvision.mp4)
 
 ## ⚡ Local Setup
 
